@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/GutenbergLibrary/static/css/main.491594a3.css",
-    "main.js": "/GutenbergLibrary/static/js/main.14fe213e.js",
+    "main.css": "/GutenbergLibrary/static/css/main.351a0ba0.css",
+    "main.js": "/GutenbergLibrary/static/js/main.88c2f2aa.js",
     "index.html": "/GutenbergLibrary/index.html",
-    "main.491594a3.css.map": "/GutenbergLibrary/static/css/main.491594a3.css.map",
-    "main.14fe213e.js.map": "/GutenbergLibrary/static/js/main.14fe213e.js.map"
+    "main.351a0ba0.css.map": "/GutenbergLibrary/static/css/main.351a0ba0.css.map",
+    "main.88c2f2aa.js.map": "/GutenbergLibrary/static/js/main.88c2f2aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.491594a3.css",
-    "static/js/main.14fe213e.js"
+    "static/css/main.351a0ba0.css",
+    "static/js/main.88c2f2aa.js"
   ]
 }
