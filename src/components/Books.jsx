@@ -52,14 +52,14 @@ const Books = () => {
     <div className="h-full bg-[#765827] justify-center pt-10">
  
       <div className="flex mb-4 px-10">
-        <input
+        <input 
           type="text"
           placeholder="Search Books..."
           value={search}
           onChange={handleSearchChange}
-          className="w-full px-4 py-2 rounded-md mr-2"
+          className="w-full px-4 py-2 rounded-md mr-2 bg-[#C8AE7D] text-[#65451F]"
         />
-        <button onClick={toggleShowFavorites} className="px-4 py-2 rounded-md bg-blue-500 text-white">
+        <button onClick={toggleShowFavorites} className="px-4 py-2 rounded-md bg-red-900 text-[#EAC696]">
           {showFavorites ? "Show All" : "Show Favorites"}
         </button>
       </div >
