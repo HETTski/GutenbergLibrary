@@ -1,6 +1,6 @@
 {
   "name": "gutenberg-app",
-  "homepage": "https://hettski.github.io/GutenbergLibrary/", 
+  "homepage": "https://hettski.github.io/GutenbergLibrary/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

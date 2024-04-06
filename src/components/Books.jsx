@@ -58,10 +58,10 @@ const Books = () => {
           {showFavorites ? "Show All" : "Show Favorites"}
         </button>
       </div >
-      <div className="grid px-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid px-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
         {filteredBooks.map((book) => (
-          <div key={book.id} className="bg-white rounded shadow p-4 relative">
-            <h2 className="text-lg font-semibold mb-2">{book.title}</h2>
+          <div key={book.id} className="bg-white rounded shadow p-4 relative bg-[#C8AE7D]">
+            <h2 className="text-lg font-semibold mx-4 ">{book.title}</h2>
             <img
               src={book.formats["image/jpeg"]}
               alt={book.title}
@@ -80,14 +80,14 @@ const Books = () => {
             {favorites.find((favBook) => favBook.id === book.id) ? (
               <button
                 onClick={() => removeFromFavorites(book)}
-                className="absolute top-0 right-0 mt-2 mr-2 text-yellow-500"
+                className="absolute top-0 right-0 mx-4 text-yellow-500 text-4xl "
               >
                 ★
               </button>
             ) : (
               <button
                 onClick={() => addToFavorites(book)}
-                className="absolute top-0 right-0 mt-2 mr-2 text-gray-400"
+                className="absolute top-0 right-0  mx-4 text-gray-400 text-4xl"
               >
                 ☆
               </button>
