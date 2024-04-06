@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Navbar from "./navbar";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -34,14 +35,18 @@ const Books = () => {
     setShowFavorites(!showFavorites);
   };
 
+  const canReadBook = (book) => {
+    return book.formats && book.formats["text/plain; charset=utf-8"];
+  };
+
   const filteredBooks = showFavorites ? favorites : books.filter((book) =>
-    book.title.toLowerCase().includes(search.toLowerCase())
+    book.title.toLowerCase().includes(search.toLowerCase()) && canReadBook(book)
   );
 
   return (
-    <div className="h-full  px-10 bg-[#ccffcc] justify-center ">
-      <h1 className="text-3xl font-bold mb-4">Books:</h1>
-      <div className="flex mb-4">
+    <div className="h-full  bg-[#765827] justify-center pt-10">
+ 
+      <div className="flex mb-4 px-10">
         <input
           type="text"
           placeholder="Search Books..."
@@ -52,8 +57,8 @@ const Books = () => {
         <button onClick={toggleShowFavorites} className="px-4 py-2 rounded-md bg-blue-500 text-white">
           {showFavorites ? "Show All" : "Show Favorites"}
         </button>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      </div >
+      <div className="grid px-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {filteredBooks.map((book) => (
           <div key={book.id} className="bg-white rounded shadow p-4 relative">
             <h2 className="text-lg font-semibold mb-2">{book.title}</h2>
@@ -63,12 +68,15 @@ const Books = () => {
               className="w-full h-auto mb-2"
             />
             <div className="flex justify-center">
-            <p className="text-blue-500 mb-2">
-              <button className="px-4 py-2 rounded-md bg-blue-400 text-white ">
-                <a href={book.formats["text/plain; charset=utf-8"]}>Read</a>
-              </button>
-            </p>
-            </div>    
+              {canReadBook(book) && (
+                <button
+                  onClick={() => window.open(book.formats["text/plain; charset=utf-8"], '_blank')} 
+                  className="px-4 py-2 rounded-md bg-blue-400 text-white"
+                >
+                  Read
+                </button>
+              )}
+            </div>
             {favorites.find((favBook) => favBook.id === book.id) ? (
               <button
                 onClick={() => removeFromFavorites(book)}
