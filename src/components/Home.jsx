@@ -3,7 +3,7 @@ import Navbar from "./navbar";
 
 const Home = () => {
   return (
-      <div name='home' className=' w-full h-full bg-[#65451F] pb-5'>
+      <div name='home' className=' w-full h-full bg-[#65451F] pt-5 pb-5'>
 
         <div className=" w-full h-full px-20"> 
           <h1 className="text-4xl sm:text-7xl font-bold text-[#EAC696] ">Welcome to Gutenberg Project library!</h1>

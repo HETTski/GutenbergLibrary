@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lugrasimo&display=swap');
+
+@layer base{
+    h1{
+        font-family: 'Lugrasimo', sans-serif;
+    }
+    body{
+        font-family: 'EB Garamond', sans-serif;
+    }
+}
