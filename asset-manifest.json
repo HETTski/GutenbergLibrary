@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/gutenberg/static/css/main.2849a492.css",
-    "main.js": "/gutenberg/static/js/main.04aad2de.js",
-    "index.html": "/gutenberg/index.html",
-    "main.2849a492.css.map": "/gutenberg/static/css/main.2849a492.css.map",
-    "main.04aad2de.js.map": "/gutenberg/static/js/main.04aad2de.js.map"
+    "main.css": "/GutenbergLibrary/static/css/main.2849a492.css",
+    "main.js": "/GutenbergLibrary/static/js/main.04aad2de.js",
+    "index.html": "/GutenbergLibrary/index.html",
+    "main.2849a492.css.map": "/GutenbergLibrary/static/css/main.2849a492.css.map",
+    "main.04aad2de.js.map": "/GutenbergLibrary/static/js/main.04aad2de.js.map"
   },
   "entrypoints": [
     "static/css/main.2849a492.css",
